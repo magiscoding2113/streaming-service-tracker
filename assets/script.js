@@ -1,4 +1,6 @@
 // faustos's code 
+
+
 var searchesDiv = $("#searches");
 
 
@@ -9,6 +11,30 @@ var searchButton = $("#searchBtn");
 
 
 // var storedSearches = getStoredSearches();
+
+var omdbResponse 
+var streamingResponse 
+
+var requestUrl = "http://www.omdbapi.com/?t=super+bad&apikey=a3c68b61"
+fetch(requestUrl)
+.then(function (response) {
+return response.json();
+})
+.then(function (data) {
+ console.log(data);
+ fetch('https://streaming-availability.p.rapidapi.com/get/basic?country=us&imdb_id=tt0944947&output_language=en', options)
+ .then(response => response.json())
+ .then(response => console.log(response.streamingInfo)
+ console.log(data)
+ 
+ 
+ )
+
+
+ .catch(err => console.error(err));
+
+})
+
 
 var addedMovie = newMovie();
 
