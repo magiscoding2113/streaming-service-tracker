@@ -1,11 +1,4 @@
 
-      
-  
-
-
-
-
-
 const options = {
   method: 'GET',
   headers: {
@@ -59,11 +52,12 @@ document.getElementById("search-btn").addEventListener("click", event => {
           var movieTitle = data2.title
           document.getElementById("movie-title").innerHTML = movieTitle;
           
-          
-          
           if (data2.streamingInfo.netflix) {
             document.getElementById("streaming").innerHTML = "It's On Netflix";
             console.log("It's On Netflix")
+          
+          
+          
           }
           
 
