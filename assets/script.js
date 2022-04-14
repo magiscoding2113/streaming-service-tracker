@@ -11,7 +11,7 @@ document.getElementById("search-btn").addEventListener("click", event => {
   var userInput = document.getElementById("search").value
 
 
-  var apiUrl = "http://www.omdbapi.com/?t=" + userInput + "&apikey=a3c68b61"
+  var apiUrl = "https://www.omdbapi.com/?t=" + userInput + "&apikey=a3c68b61"
   fetch(apiUrl)
     .then(function (res) {
       return res.json();
@@ -31,7 +31,7 @@ document.getElementById("search-btn").addEventListener("click", event => {
           // append title and images!!!!
 
           function getApi() {
-            var requestUrl = ("http://www.omdbapi.com/?t=" + userInput + "&apikey=a3c68b61")
+            var requestUrl = ("https://www.omdbapi.com/?t=" + userInput + "&apikey=d9149ef")
             fetch(requestUrl)
               .then(function (response) {
                 return response.json();
@@ -61,6 +61,11 @@ document.getElementById("search-btn").addEventListener("click", event => {
                   document.getElementById("streaming").innerHTML = "It's On Disney";
                   console.log("It's On Disney")
                 }
+                else if (data2.streamingInfo.netflix === true ) {
+                  document.getElementById("streaming").innerHTML = "It's On Hulu";
+                  console.log("It's On Hulu")
+                }
+
             })
           }
           getApi();
