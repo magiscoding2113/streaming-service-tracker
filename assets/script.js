@@ -1,8 +1,33 @@
+
+      
+  
+//       function getApi() {
+//           var requestUrl = ("http://www.omdbapi.com/?t=four+brothers&apikey=a3c68b61")
+//           fetch(requestUrl)
+//           .then(function (response) {
+//           return response.json();
+//           })
+//           .then(function (data) {
+//            console.log(data);
+//            console.log(data.Poster)
+//            let imgElem = document.createElement('img')
+//            console.log(imgElem)
+//            imgElem.setAttribute('src', data.Poster)
+//            document.getElementById('searches').append(imgElem)
+//           })
+//           }
+//           getApi();
+
+
+
+
+
 const options = {
   method: 'GET',
   headers: {
     'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com',
     'X-RapidAPI-Key': 'be4375e137msha3ecb5c13006495p1401e8jsn1c464ee45feb'
+
   }
 
 };
