@@ -11,9 +11,7 @@ const options = {
   headers: {
     'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com',
     'X-RapidAPI-Key': 'be4375e137msha3ecb5c13006495p1401e8jsn1c464ee45feb'
-    
   }
-  
 };
 
 document.getElementById("search-btn").addEventListener("click", event => {
