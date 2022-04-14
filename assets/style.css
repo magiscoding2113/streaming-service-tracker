@@ -1,5 +1,9 @@
 
 body {
+  background-image: url('https://wallpaperaccess.com/full/2825704.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -19,3 +23,13 @@ main {
     width: 100%;
     text-align: center;
 }
+
+.hero {
+  text-align: center;
+
+}
+
+.my-footer {
+  padding: 0px !important;
+}
+
