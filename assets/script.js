@@ -98,14 +98,6 @@ init();
 
 //step 4 Style elements from step 3 
 
-
-
-
-
-
-
-
-
 // materialize code for search bar
 $(document).ready(function() {
     M.updateTextFields();

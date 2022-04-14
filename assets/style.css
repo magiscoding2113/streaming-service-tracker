@@ -20,7 +20,7 @@ main {
 .row{
   padding: 3%;
 }
-.page-footer {
+main .footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -33,10 +33,7 @@ main {
 
 }
 
-.my-footer {
+.footer {
   padding: 0px !important;
 }
-
-
-
 
