@@ -1,8 +1,4 @@
-.title {
-  font-family: 'Roboto Mono', monospace;
-  color: white;
-  font-size: 70px;
-}
+
 body {
   background-image: url('https://wallpaperaccess.com/full/2825704.gif');
   background-repeat: no-repeat;
@@ -12,11 +8,9 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
 }
-
 .row{
   padding: 3%;
 }
@@ -28,15 +22,9 @@ main {
     text-align: center;
 }
 
-.hero {
-  text-align: center;
-
-}
-
 .my-footer {
   padding: 0px !important;
 }
-
 
 
 

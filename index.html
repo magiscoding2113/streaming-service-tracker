@@ -30,11 +30,14 @@
     <div class="column is-one-quarter has-background-grey-lighter">
       <form>
         <div class="input-field">
-            <input class="input is-primary" type="text" placeholder="Movie or TV Title">
+            <input id="search" class="input is-primary" type="text" placeholder="Movie or TV Title">
         </div>
       </form>
       <div id="searches"></div>
-      <button class="button">Search</button>
+
+
+      <button id="search-btn" class="button">Search</button>
+
     </div>
           <!--Movie Image column-->
     <div class="column is-one-quarter is-right">
@@ -44,9 +47,13 @@
           </figure>
       </div>
     <!-- Movie title column-->
+
+      <div class="column is-half">
+
       <div class="column is-half has-background-grey-lighter">
+
         <code>Title and network column</code>
-        <div class="block">
+        <div id="movie-title" class="block">
             This text is within a <strong>block</strong>.
           </div>
           <div class="block">
@@ -57,11 +64,15 @@
           </div>
       </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</main>
+
+
+   
+
+
+
   
 <footer class="footer my-footer">
+
     <div class="content has-text-centered">
         <p>
             <strong>Streaming Services</strong> by <a href="https://github.com/magiscoding2113/streaming-service-tracker">Flaming Coders</a>. The source code is licensed
@@ -72,4 +83,10 @@
 </footer>
 </div>
 </footer>
+</main>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/script.js"></script>
+</body>
+
 </html>
