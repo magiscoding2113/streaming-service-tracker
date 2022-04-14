@@ -1,3 +1,4 @@
+
 body {
   background-image: url('https://wallpaperaccess.com/full/2825704.gif');
   background-repeat: no-repeat;
@@ -20,15 +21,10 @@ main {
     width: 100%;
     text-align: center;
 }
-.hero {
-  text-align: center;
-}
+
 .my-footer {
   padding: 0px !important;
 }
-
-
-
 
 
 
