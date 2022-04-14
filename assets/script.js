@@ -1,114 +1,47 @@
-// faustos's code 
-var searchesDiv = $("#searches");
-
-
-var searchInput = $("#searchInput");
-
-
-var searchButton = $("#searchBtn");
-
-
-var storedSearches = getStoredSearches();
-
-var addedMovie = newMovie();
-
-
-function searchButtonClicked() {
-  let movieVal = searchInput.val().trim();
-  let movie = newMovie(movieVal, null);
-  getMovieData(movie);
-  //This will clear the value once the search is activate
-  searchInput.val("");
-}
-
-function getMovieData() {
-  addedMovie = movie;
-  let queryURLTitle = "";
-  let queryURLImage = "";
-
-  //   TODO: Build API URL 
-
-
-
-  performAPIGETCall(queryURLTitle, buildURLTitle);
-  performAPIGETCall(queryURLImage, buildImage);
-}
-
-function performAPIGETCall(queryURL, callback) {
-  // TODO: perform api call 
-  // $.ajax({ url: queryURL, method: "GET" }).then(function (response) {
-  //   callback(response);
-  // });
-
-
-  // remove below once api in place
-  var myResponse = {
-    title: "title",
-    network: "network",
-    image: "https://someimageUrl.com"
-  };
-  callback(myResponse);
-}
-
-function buildURLTitle(data) {
-
-  // do some DOM things
-  // add some data to addedMovie, then pass into addNewSearch
-  addNewSearch(addedMovie)
-}
-
-function buildImage(data) {
-
-   // do some DOM things
-
-}
-
-function addNewSearch(title) {
-  // add search to localStorage and our storedSearches collection
-  // call our build history method
-}
-
-function buildSearchHistory() {
-  // add search history items to DOM
-}
-
-function newMovie(title, network, image) {
-  return { "title": title, "network": network, "image": image };
-}
-
-searchInput.on("keyup", function (event) {
-  if (event.key === "Enter") {
-    searchButtonClicked();
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com',
+    'X-RapidAPI-Key': 'be4375e137msha3ecb5c13006495p1401e8jsn1c464ee45feb'
   }
-});
+};
 
-// get init function 
-init();
+document.getElementById("search-btn").addEventListener("click", event => {
+  event.preventDefault()
+  var userInput = document.getElementById("search").value
+  
+  
+  var apiUrl = "http://www.omdbapi.com/?t=" + userInput + "&apikey=a3c68b61"
+  fetch(apiUrl)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    var streamingUrl = 'https://streaming-availability.p.rapidapi.com/get/basic?country=us&imdb_id=' + data.imdbID + '&output_language=en'
+    
+    
+    console.log(data)
+    fetch(streamingUrl, options)
+    .then(function (res2) {
+      return res2.json();
+    })
+    .then(function (data2) {
+      console.log(data) // omdb response
+      console.log(data2) // rapidAPi response
+      // append title and images!!!!
 
 
 
-//step 1 store our movie searches 
-
-
-//step 2 make sure we have an element to house our history <searchdiv>
-
-
-//step 3 we need to leaverage our stored searches and add elements to our searches div 
-
-
-//step 4 Style elements from step 3 
-
-
-
-
-
-
-
-
-
-// materialize code for search bar
-$(document).ready(function() {
-    M.updateTextFields();
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+  })
+  .catch(function (err) {
+    console.error(err);
   });
-        
-M.AutoInit();
+})
+
+//library of congress project solution
+//bear image code from Mariana 
+//
