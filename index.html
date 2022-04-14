@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css" />
-  <title>Streaming Services</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Streaming Services</title>
 </head>
 <main>
-  <!-- Beginning of Header -->
+    <!-- Beginning of Header -->
 
-  <header>
+    <header>
     <section class="hero ">
-      <div class="hero-body">
-        <p class="title">
-          Streaming Services
-        </p>
-      </div>
-    </section>
-  </header>
-  <!-- Ending of Header -->
-
-  <body>
-    <div class="row">
-      <div class="columns is-multiline">
-        <div class="column is-one-quarter has-background-grey-lighter">
-          <form>
-            <div class="input-field">
-              <input id="search" class="input is-primary" type="text" placeholder="Movie or TV Title">
-            </div>
-          </form>
-          <div id="searches"></div>
-
-
-          <button id="search-btn" class="button">Search</button>
-
+       <div class="hero-body">
+         <p class="title" >
+           Streaming Services
+         </p>
+       </div>
+     </section>
+    </header>
+    <!-- Ending of Header -->
+<body>
+<div class="row">
+  <div class="columns is-multiline">
+    <div class="column is-one-quarter">
+      <form>
+        <div class="input-field has-background-grey-lighter">
+            <input id="search" class="input is-primary" type="text" placeholder="Movie or TV Title">
         </div>
-        <!--Movie Image column-->
-        <div class="column is-one-quarter is-right">
+      </form>
+      <div id="searches"></div>
 
-          <figure id="movie-poster" class="image is-square">
 
+      <button id="search-btn" class="button">Search</button>
+
+    </div>
+          <!--Movie Image column-->
+    <div class="column is-one-quarter is-right">
+        
+        <figure id="movie-poster" class="image is-square">
+            
           </figure>
-        </div>
-        <!-- Movie title column-->
-
-        <div class="column is-half">
-
-          <div class="column is-half has-background-grey-lighter">
-
-
-            <div id="movie-title" class="block">
-
-            </div>
-            <div id="streaming" class="block">
-
-            </div>
-
-          </div>
-        </div>
-
-        <footer class="footer my-footer">
-
-          <div class="content has-text-centered">
-            <p>
-              <strong>Streaming Services</strong> by <a
-                href="https://github.com/magiscoding2113/streaming-service-tracker">Flaming Coders</a>. The source code
-              is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-          </div>
-        </footer>
       </div>
-      </footer>
-</main>
+    <!-- Movie title column-->
 
+      <div class="column is-half">
+
+      <div class="column is-half">
+
+        
+        <div id="movie-title" class="has-background-grey-lighter">
+          
+          </div>
+          <div id="streaming" class="has-background-grey-lighter">
+            
+          </div>
+ 
+      </div>
+</div>
+
+
+   
+
+
+
+  
+<footer class="footer my-footer">
+
+    <div class="content has-text-centered">
+        <p>
+            <strong>Streaming Services</strong> by <a href="https://github.com/magiscoding2113/streaming-service-tracker">Flaming Coders</a>.
+        </p>
+    </div>
+</footer>
+</div>
+</footer>
+</main>
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/script.js"></script>
 </body>
