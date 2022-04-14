@@ -1,3 +1,114 @@
+function getApi() {
+  var requestUrl = ("http://www.omdbapi.com/?t=without+a+paddle+&apikey=a3c68b61")
+  fetch(requestUrl)
+  .then(function (response) {
+  return response.json();
+  })
+  .then(function (data) {
+   console.log(data);
+   console.log(data.Poster)
+   let imgElem = document.createElement('img')
+   console.log(imgElem)
+   imgElem.setAttribute('src', data.Poster)
+   document.getElementById('searches').append(imgElem)
+  })
+  }
+  getApi();
+
+
+
+  function getApi() {
+  var requestUrl = ("http://www.omdbapi.com/?t=top+gun+&apikey=a3c68b61")
+  fetch(requestUrl)
+  .then(function (response) {
+   return response.json();
+  })
+  .then(function (data) {
+  console.log(data);
+  console.log(data.Poster)
+  let imgElem = document.createElement('img')
+  console.log(imgElem)
+  imgElem.setAttribute('src', data.Poster)
+  document.getElementById('searches').append(imgElem)
+  })
+  }
+  getApi();
+
+
+      
+  
+      function getApi() {
+          var requestUrl = ("http://www.omdbapi.com/?t=four+brothers&apikey=a3c68b61")
+          fetch(requestUrl)
+          .then(function (response) {
+          return response.json();
+          })
+          .then(function (data) {
+           console.log(data);
+           console.log(data.Poster)
+           let imgElem = document.createElement('img')
+           console.log(imgElem)
+           imgElem.setAttribute('src', data.Poster)
+           document.getElementById('searches').append(imgElem)
+          })
+          }
+          getApi();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // faustos's code 
 var searchesDiv = $("#searches");
 
