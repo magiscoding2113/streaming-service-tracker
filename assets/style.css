@@ -1,4 +1,8 @@
-
+.title {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 70px;
+}
 body {
   background-image: url('https://wallpaperaccess.com/full/2825704.gif');
   background-repeat: no-repeat;
@@ -32,4 +36,7 @@ main {
 .my-footer {
   padding: 0px !important;
 }
+
+
+
 
