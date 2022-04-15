@@ -1,3 +1,40 @@
+
+var searchInput = document.querySelector("#search");
+var searchButton = document.querySelector("#search-btn");
+var inputList = document.querySelector("#input-list");
+var msgError = document.querySelector("#msg");
+var recentSearchesSpan = document.querySelector("#recent-searches");
+var dataList = JSON.parse(localStorage.getItem("titles")) || []
+
+renderSearchList();
+
+function renderSearchList() {
+  for (var i = 0; i < dataList.length; i++) {
+    var inputSearch = document.createElement("li");
+    inputSearch.textContent = dataList[i];
+    inputList.append(inputSearch);
+
+    
+  }
+}
+
+searchButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var search = document.querySelector("#search").value;
+
+  console.log(search);
+
+  dataList.push(search)
+  localStorage.setItem("titles", JSON.stringify(dataList));
+
+  renderSearchList();
+
+});
+      
+
+
+
 const options = {
   method: 'GET',
   headers: {
