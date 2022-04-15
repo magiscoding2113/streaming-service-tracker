@@ -3,52 +3,34 @@ var searchButton = document.querySelector("#search-btn");
 var inputList = document.querySelector("#input-list");
 var msgError = document.querySelector("#msg");
 var recentSearchesSpan = document.querySelector("#recent-searches");
-var data = ["Eurovision, Encanto, Turning Red"];
+var dataList = JSON.parse(localStorage.getItem("titles")) || []
 
+renderSearchList();
 
-function displayMessage(type, message) {
-  msgError.textContent = message;
-  msgError.setAttribute("class", type);
+function renderSearchList() {
+  for (var i = 0; i < dataList.length; i++) {
+    var inputSearch = document.createElement("li");
+    inputSearch.textContent = dataList[i];
+    inputList.append(inputSearch);
+
+    
+  }
 }
-
-function renderRecentSearched(data) {
-  inputList.innerHTML = "";
-  inputList.textContent = data.length;
-  
-  for (var i = 0; i < data.length; i++) {
-    var inputs = data[i];
-
-    var li = document.createElement("li");
-    li.textContent = inputs;
-    li.setAttribute("input-list", i);
-
-    todoList.appendChild(li);
-}
-recentSearchesSpan.textContent = search;
-}
-
-
-
 
 searchButton.addEventListener("click", function(event) {
   event.preventDefault();
 
   var search = document.querySelector("#search").value;
 
-  if (search === "") {
-    displayMessage("error", "No Results Found");
+  console.log(search);
 
-  localStorage.setItem("search", search);
-  
-  renderRecentSearched();
+  dataList.push(search)
+  localStorage.setItem("titles", JSON.stringify(dataList));
 
-  }
+  renderSearchList();
+
 });
       
-  
-
-
-
 
 
 const options = {
