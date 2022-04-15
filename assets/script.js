@@ -1,4 +1,49 @@
+var searchInput = document.querySelector("#search");
+var searchButton = document.querySelector("#search-btn");
+var inputList = document.querySelector("#input-list");
+var msgError = document.querySelector("#msg");
+var recentSearchesSpan = document.querySelector("#recent-searches");
+var data = ["Eurovision, Encanto, Turning Red"];
 
+
+function displayMessage(type, message) {
+  msgError.textContent = message;
+  msgError.setAttribute("class", type);
+}
+
+function renderRecentSearched(data) {
+  inputList.innerHTML = "";
+  inputList.textContent = data.length;
+  
+  for (var i = 0; i < data.length; i++) {
+    var inputs = data[i];
+
+    var li = document.createElement("li");
+    li.textContent = inputs;
+    li.setAttribute("input-list", i);
+
+    todoList.appendChild(li);
+}
+recentSearchesSpan.textContent = search;
+}
+
+
+
+
+searchButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var search = document.querySelector("#search").value;
+
+  if (search === "") {
+    displayMessage("error", "No Results Found");
+
+  localStorage.setItem("search", search);
+  
+  renderRecentSearched();
+
+  }
+});
       
   
 
